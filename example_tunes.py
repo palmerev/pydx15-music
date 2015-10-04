@@ -26,6 +26,7 @@ bn_part_a = NoteSeq(
     "B4 B C'' D D C B' A G G A B B A A2 B4 B C'' D D C B, A G G A B A G G"
     )
 bn_part_b = NoteSeq("A4 A B G A B8 C'' B4 G A B8 C'' B4 A G A D")
+
 bn_midi = Midi(1, tempo=120)
 bn_midi.seq_notes(bn_part_a + bn_part_b, track=0)
 bn_midi.write(filename)
@@ -37,13 +38,13 @@ print "wrote " + filename
 
 # "Frere Jacques", a round in two tracks
 filename = "frere-jacques-two-track.mid"
-fj_notes1 = NoteSeq(
-    "C4' D E C C D E C E F G2 E4 F G2"
-    )
+fj_notes1 = NoteSeq("C4' D E C C D E C E F G2 E4 F G2")
 fj_notes2 = NoteSeq("G8 A G F E4 C G8 A G F E4 C C G, C2' C4 G, C2'")
+all_notes = fj_notes1 + fj_notes2
+
 fj_midi = Midi(2, tempo=120)
-fj_midi.seq_notes(fj_notes1 + fj_notes2, track=0)
-fj_midi.seq_notes(fj_notes1 + fj_notes2, track=1, time=8)
+fj_midi.seq_notes(all_notes, track=0)
+fj_midi.seq_notes(all_notes, track=1, time=8)
 fj_midi.write(filename)
 print "wrote " + filename
 
