@@ -46,3 +46,6 @@ fj_midi.seq_notes(fj_notes1 + fj_notes2, track=0)
 fj_midi.seq_notes(fj_notes1 + fj_notes2, track=1, time=8)
 fj_midi.write(filename)
 print "wrote " + filename
+
+
+##########################################
