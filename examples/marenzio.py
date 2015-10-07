@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 
-from __future__ import division
 from pyknon.genmidi import Midi
 from pyknon.music import NoteSeq
 
