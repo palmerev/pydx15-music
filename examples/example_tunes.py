@@ -30,7 +30,6 @@ bn_part_b = NoteSeq("A4 A B G A B8 C'' B4 G A B8 C'' B4 A G A D")
 bn_midi = Midi(1, tempo=120)
 bn_midi.seq_notes(bn_part_a + bn_part_b, track=0)
 bn_midi.write(filename)
-print "wrote " + filename
 
 # "Ode to Joy", test adding a second track
 #
@@ -49,7 +48,6 @@ fj_midi.seq_notes(all_notes, track=0)
 fj_midi.seq_notes(all_notes, track=1, time=8)
 fj_midi.write(filename)
 
-print "wrote " + filename
 
 
 ##########################################
