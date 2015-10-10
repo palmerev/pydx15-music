@@ -19,6 +19,12 @@ D2, D D4 G2,, G4 D2, D2 Bb,, Bb4., A8 G4 Eb4 F2 Bb,,
 Bb4,, F2, G4 D4. Eb8 F2 F G2 G2. F4 Eb D C2 C
 D4 C8 Bb, A4 G D1' G1.,
 """)
+
+# turn the volume down on the string instruments
+for part in [top_part, middle_part, bottom_part]:
+    for note in part:
+        note.volume = 45
+
 midi = Midi(number_tracks=3, tempo=105, instrument=48)
 midi.seq_notes(top_part, track=0)
 midi.seq_notes(middle_part, track=1)

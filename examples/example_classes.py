@@ -34,3 +34,6 @@ NoteSeq("C4 C, C C' C''")
 
 # same octave and duration applied until changed
 NoteSeq("C#4'' D E A' C#''")
+
+#  dotted rhythm example
+NoteSeq("C4.' G8, C4.' G8, C8' G, C' E G2")
